@@ -6,7 +6,7 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function makePrisma() {
-  const url = process.env.DATABASE_URL ?? "postgresql://localhost:5432/aibuilder";
+  const url = process.env.NETLIFY_DATABASE_URL ?? process.env.DATABASE_URL ?? "postgresql://localhost:5432/aibuilder";
   const adapter = new PrismaPg(url);
   return new PrismaClient({
     adapter,
