@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BuildAI — AI Website Builder
 
-## Getting Started
+A production-quality AI-powered website builder SaaS. Describe your idea → AI generates a complete website → Edit → Save versions → Deploy or Export ZIP.
 
-First, run the development server:
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 16, TypeScript, Tailwind CSS, Framer Motion |
+| State | Zustand, React Query |
+| Editor | Monaco Editor (VS Code engine) |
+| Backend | Next.js API Routes, Prisma 7, PostgreSQL |
+| Auth | NextAuth.js v5 (Google OAuth + Credentials) |
+| AI | OpenAI GPT-4o (streaming) |
+| Cache | Redis (ioredis) |
+| Storage | Cloudinary |
+
+## Setup
 
 ```bash
+cd aibuilder
+npm install
+cp .env.example .env     # fill in your credentials
+npx prisma generate
+npx prisma migrate dev --name init
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/aibuilder"
+NEXTAUTH_SECRET="min-32-char-secret-key"
+NEXTAUTH_URL="http://localhost:3000"
+OPENAI_API_KEY=""
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+REDIS_URL="redis://localhost:6379"
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npx prisma studio` | Open database GUI |
+| `npx prisma migrate dev` | Apply DB migrations |
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- AI website generation with GPT-4o streaming
+- Monaco Editor (VS Code) for code editing
+- Live preview (desktop/tablet/mobile)
+- Version history with restore
+- Export ZIP with all source files
+- One-click deploy
+- Analytics dashboard with Recharts
+- Google OAuth + email/password auth
+- PostgreSQL with Prisma 7
+- Full TypeScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy to Vercel: set all env vars, push to GitHub, import in Vercel dashboard.
