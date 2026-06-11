@@ -1,0 +1,111 @@
+2026-06-11T19:28:44.701140Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-06-11T19:28:44.701914Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder", pattern: "**/*", negated: false }
+2026-06-11T19:28:44.702382Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-06-11T19:28:44.702402Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder" }
+2026-06-11T19:28:44.704393Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.704727Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.716186Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.717813Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\auth\\register\\route.ts"
+2026-06-11T19:28:44.717811Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\page.tsx"
+2026-06-11T19:28:44.717823Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\.github\\workflows\\deploy.yml"
+2026-06-11T19:28:44.717893Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\pricing.tsx"
+2026-06-11T19:28:44.717821Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\badge.tsx"
+2026-06-11T19:28:44.717828Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\faq.tsx"
+2026-06-11T19:28:44.717962Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\auth\\[...nextauth]\\route.ts"
+2026-06-11T19:28:44.717981Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\project\\[id]\\page.tsx"
+2026-06-11T19:28:44.717986Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\projects\\[id]\\versions\\[versionId]\\restore\\route.ts"
+2026-06-11T19:28:44.718005Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\AGENTS.md"
+2026-06-11T19:28:44.718009Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\layout\\sidebar.tsx"
+2026-06-11T19:28:44.718059Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\button.tsx"
+2026-06-11T19:28:44.718063Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\dashboard\\home.tsx"
+2026-06-11T19:28:44.718104Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\features.tsx"
+2026-06-11T19:28:44.718055Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\prisma.config.ts"
+2026-06-11T19:28:44.718136Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\preview\\preview-frame.tsx"
+2026-06-11T19:28:44.718132Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\CLAUDE.md"
+2026-06-11T19:28:44.718132Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\analytics\\page.tsx"
+2026-06-11T19:28:44.718175Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\deploy\\route.ts"
+2026-06-11T19:28:44.718170Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\tooltip.tsx"
+2026-06-11T19:28:44.718233Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\card.tsx"
+2026-06-11T19:28:44.718291Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\generation-progress.tsx"
+2026-06-11T19:28:44.718250Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\footer.tsx"
+2026-06-11T19:28:44.718253Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\code-editor.tsx"
+2026-06-11T19:28:44.718250Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\generate\\route.ts"
+2026-06-11T19:28:44.718275Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\eslint.config.mjs"
+2026-06-11T19:28:44.718281Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\providers.tsx"
+2026-06-11T19:28:44.718413Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\dialog.tsx"
+2026-06-11T19:28:44.718310Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\deployments\\page.tsx"
+2026-06-11T19:28:44.718310Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\deployments\\route.ts"
+2026-06-11T19:28:44.718462Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\file-tree.tsx"
+2026-06-11T19:28:44.718335Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\public\\file.svg"
+2026-06-11T19:28:44.718335Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\auth.ts"
+2026-06-11T19:28:44.718514Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\projects\\route.ts"
+2026-06-11T19:28:44.718361Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\project-editor.tsx"
+2026-06-11T19:28:44.718399Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\generator-ui.tsx"
+2026-06-11T19:28:44.718475Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\hero.tsx"
+2026-06-11T19:28:44.718573Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\utils.ts"
+2026-06-11T19:28:44.718569Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\layout.tsx"
+2026-06-11T19:28:44.718597Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\export\\route.ts"
+2026-06-11T19:28:44.718603Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\projects\\page.tsx"
+2026-06-11T19:28:44.718518Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\nav.tsx"
+2026-06-11T19:28:44.718636Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\editor\\version-list.tsx"
+2026-06-11T19:28:44.718614Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\templates\\page.tsx"
+2026-06-11T19:28:44.718652Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\openai.ts"
+2026-06-11T19:28:44.718675Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\validations.ts"
+2026-06-11T19:28:44.718628Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\projects\\[id]\\files\\route.ts"
+2026-06-11T19:28:44.718530Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\avatar.tsx"
+2026-06-11T19:28:44.718785Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\(auth)\\login\\page.tsx"
+2026-06-11T19:28:44.718659Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\public\\globe.svg"
+2026-06-11T19:28:44.718512Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\input.tsx"
+2026-06-11T19:28:44.718687Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\settings\\page.tsx"
+2026-06-11T19:28:44.718688Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\label.tsx"
+2026-06-11T19:28:44.718726Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\public\\window.svg"
+2026-06-11T19:28:44.718741Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\landing\\demo.tsx"
+2026-06-11T19:28:44.718732Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\dashboard\\page.tsx"
+2026-06-11T19:28:44.718931Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\(auth)\\register\\page.tsx"
+2026-06-11T19:28:44.718944Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\redis.ts"
+2026-06-11T19:28:44.718776Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\store\\project.store.ts"
+2026-06-11T19:28:44.718776Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\generate\\page.tsx"
+2026-06-11T19:28:44.718998Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\progress.tsx"
+2026-06-11T19:28:44.719011Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\netlify.toml"
+2026-06-11T19:28:44.718783Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\separator.tsx"
+2026-06-11T19:28:44.718572Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\netlify\\database\\migrations\\0001_init.sql"
+2026-06-11T19:28:44.719061Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\package.json"
+2026-06-11T19:28:44.718892Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\projects\\[id]\\route.ts"
+2026-06-11T19:28:44.718919Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\public\\next.svg"
+2026-06-11T19:28:44.719106Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\next.config.ts"
+2026-06-11T19:28:44.719116Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\postcss.config.mjs"
+2026-06-11T19:28:44.718746Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\lib\\prisma.ts"
+2026-06-11T19:28:44.719026Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\tabs.tsx"
+2026-06-11T19:28:44.719031Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\analytics\\route.ts"
+2026-06-11T19:28:44.719036Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\components\\ui\\textarea.tsx"
+2026-06-11T19:28:44.719074Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\store\\ui.store.ts"
+2026-06-11T19:28:44.719074Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\public\\vercel.svg"
+2026-06-11T19:28:44.718913Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\api\\projects\\[id]\\versions\\route.ts"
+2026-06-11T19:28:44.718938Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\README.md"
+2026-06-11T19:28:44.719133Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\layout.tsx"
+2026-06-11T19:28:44.719160Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\tsconfig.json"
+2026-06-11T19:28:44.719194Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\prisma\\schema.prisma"
+2026-06-11T19:28:44.719370Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\types\\index.ts"
+2026-06-11T19:28:44.719471Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.719494Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.719500Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.719506Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.720591Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.720621Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.720634Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.720639Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-06-11T19:28:44.720746Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "C:\\Users\\Olti\\Desktop\\AI web-builder\\aibuilder\\src\\app\\globals.css"
+2026-06-11T19:28:44.720757Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.720764Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.720769Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.720861Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.720877Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.721228Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.722022Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.722035Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.722040Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.722159Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.723110Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.723127Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-06-11T19:28:44.723134Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-06-11T19:28:44.732997Z  INFO get_globs: tailwindcss_oxide::scanner: exit
