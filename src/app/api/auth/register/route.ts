@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
+import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { registerSchema } from "@/lib/validations";
 
@@ -21,9 +22,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ user }, { status: 201 });
   } catch (error: unknown) {
-    if (error instanceof Error && error.name === "ZodError") {
+    if (error instanceof z.ZodError) {
       return NextResponse.json({ error: "Invalid input" }, { status: 400 });
     }
+    console.error("[/api/auth/register]", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
