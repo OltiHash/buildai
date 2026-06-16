@@ -4,11 +4,24 @@ let _openai: OpenAI | null = null;
 
 function getClient() {
   if (!_openai) {
-    _openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY ?? "placeholder",
-    });
+    const groqKey = process.env.GROQ_API_KEY;
+    if (groqKey) {
+      _openai = new OpenAI({
+        apiKey: groqKey,
+        baseURL: "https://api.groq.com/openai/v1",
+      });
+    } else {
+      _openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY ?? "placeholder",
+      });
+    }
   }
   return _openai;
+}
+
+function getModel() {
+  if (process.env.GROQ_API_KEY) return process.env.GROQ_MODEL ?? "llama-3.3-70b-versatile";
+  return process.env.OPENAI_MODEL ?? "gpt-4o";
 }
 
 export const SYSTEM_PROMPT = `You are an expert web developer and UI/UX designer. When given a description of a website, you generate a complete, production-quality website project.
@@ -50,8 +63,9 @@ When generating a project, return a JSON object with this structure:
 
 export async function generateWebsite(prompt: string, onChunk?: (chunk: string) => void) {
   const client = getClient();
+  const model = getModel();
   const stream = await client.chat.completions.create({
-    model: process.env.OPENAI_MODEL ?? "gpt-4o",
+    model,
     messages: [
       { role: "system", content: SYSTEM_PROMPT },
       {
@@ -62,6 +76,7 @@ export async function generateWebsite(prompt: string, onChunk?: (chunk: string) 
     stream: true,
     max_tokens: 8000,
     temperature: 0.7,
+    // Groq supports json_object mode for most models
     response_format: { type: "json_object" },
   });
 
@@ -79,7 +94,7 @@ export async function generateWebsite(prompt: string, onChunk?: (chunk: string) 
 export async function improveCode(code: string, instruction: string, language: string): Promise<string> {
   const client = getClient();
   const response = await client.chat.completions.create({
-    model: process.env.OPENAI_MODEL ?? "gpt-4o",
+    model: getModel(),
     messages: [
       {
         role: "system",
