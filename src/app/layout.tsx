@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
+  metadataBase: new URL(
+    (process.env.NEXT_PUBLIC_APP_URL || "").startsWith("http")
+      ? process.env.NEXT_PUBLIC_APP_URL!
+      : "http://localhost:3000"
+  ),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
