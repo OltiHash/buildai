@@ -38,6 +38,7 @@ export function GeneratorUI() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [generatingProjectId, setGeneratingProjectId] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
 
@@ -58,6 +59,14 @@ export function GeneratorUI() {
 
     abortRef.current = new AbortController();
 
+    setErrorMsg(null);
+
+    const reset = (msg?: string) => {
+      setIsGenerating(false);
+      steps.forEach((id) => updateGenerationStep(id, "pending"));
+      if (msg) setErrorMsg(msg);
+    };
+
     try {
       const res = await fetch("/api/generate", {
         method: "POST",
@@ -73,11 +82,17 @@ export function GeneratorUI() {
         signal: abortRef.current.signal,
       });
 
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ error: `Request failed (${res.status})` }));
+        throw new Error(err.error ?? `Request failed (${res.status})`);
+      }
+
       const reader = res.body?.getReader();
       if (!reader) throw new Error("No stream");
 
       const decoder = new TextDecoder();
       let stepIndex = 0;
+      let completed = false;
 
       while (true) {
         const { done, value } = await reader.read();
@@ -87,42 +102,48 @@ export function GeneratorUI() {
         const lines = text.split("\n").filter((l) => l.startsWith("data: "));
 
         for (const line of lines) {
+          let data: Record<string, unknown>;
           try {
-            const data = JSON.parse(line.slice(6));
-
-            if (data.chunk) {
-              setProgress((p) => Math.min(p + 2, 90));
-              if (stepIndex < steps.length - 1 && Math.random() > 0.85) {
-                updateGenerationStep(steps[stepIndex], "done");
-                stepIndex++;
-                updateGenerationStep(steps[stepIndex], "active");
-              }
-            }
-
-            if (data.done) {
-              steps.forEach((id) => updateGenerationStep(id, "done"));
-              setProgress(100);
-              if (data.result?.files) setFiles(data.result.files);
-              setGeneratingProjectId(data.projectId);
-
-              setTimeout(() => {
-                setIsGenerating(false);
-                if (data.projectId) router.push(`/project/${data.projectId}`);
-              }, 1000);
-            }
-
-            if (data.error) {
-              throw new Error(data.error);
-            }
+            data = JSON.parse(line.slice(6));
           } catch {
-            // JSON parse error on chunk data — skip
+            continue; // skip malformed SSE lines
+          }
+
+          if (data.error) {
+            throw new Error(String(data.error));
+          }
+
+          if (data.chunk) {
+            setProgress((p) => Math.min(p + 2, 90));
+            if (stepIndex < steps.length - 1 && Math.random() > 0.85) {
+              updateGenerationStep(steps[stepIndex], "done");
+              stepIndex++;
+              updateGenerationStep(steps[stepIndex], "active");
+            }
+          }
+
+          if (data.done) {
+            completed = true;
+            steps.forEach((id) => updateGenerationStep(id, "done"));
+            setProgress(100);
+            if (data.result && typeof data.result === "object" && "files" in data.result)
+              setFiles((data.result as { files: typeof [] }).files);
+            setGeneratingProjectId(data.projectId as string);
+
+            setTimeout(() => {
+              setIsGenerating(false);
+              if (data.projectId) router.push(`/project/${data.projectId}`);
+            }, 1000);
           }
         }
       }
+
+      if (!completed) reset("Generation failed. Please try again.");
     } catch (err: unknown) {
       if (err instanceof Error && err.name === "AbortError") return;
-      setIsGenerating(false);
-      steps.forEach((id) => updateGenerationStep(id, "pending"));
+      console.error("[generate]", err);
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      reset(msg);
     }
   };
 
@@ -284,6 +305,13 @@ export function GeneratorUI() {
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Error message */}
+          {errorMsg && (
+            <div className="rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
+              {errorMsg}
+            </div>
+          )}
 
           {/* Generate button */}
           <Button
