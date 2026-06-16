@@ -127,7 +127,8 @@ export function GeneratorUI() {
             steps.forEach((id) => updateGenerationStep(id, "done"));
             setProgress(100);
             if (data.result && typeof data.result === "object" && "files" in data.result)
-              setFiles((data.result as { files: typeof [] }).files);
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              setFiles((data.result as any).files);
             setGeneratingProjectId(data.projectId as string);
 
             setTimeout(() => {
